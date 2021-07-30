@@ -1,0 +1,20 @@
+{
+  "name": "fluid-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "async-validator": "^1.11.5",
+    "core-js": "^3.15.2",
+    "element-ui": "^2.15.3"
+  }
+}
