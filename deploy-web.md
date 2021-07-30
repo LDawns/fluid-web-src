@@ -12,9 +12,11 @@
 
 # 上传至Fluid
 
-1. 将 docs/.vuepress/config.js 中的 base 值替换为目标仓库名称（可以先用自己的仓库试试）
+1. 将 docs/.vuepress/config.js 中的 base 值替换为目标仓库名称（可以先用自己的仓库试试,仓库必须是public的奥，）
 2. 修改 deploy.sh 其中的git地址
 3. 运行 bash deploy.sh 命令
-4. 在对应仓库链接中查看网页是否正常
+4. 在仓库的settings中点击pages选项卡，查看网页是否正常(https://usrname.github.io/repo-name/)
 
-注： 需要上传到fluid的话需要push的权限和新增分支（gh-pages）的权限
+
+注1： 需要上传到fluid的话需要push的权限和新增分支（gh-pages）的权限
+注2：应该也可以PR, 但base要设置为/base/, PR的目标分支也要是gh-pages
