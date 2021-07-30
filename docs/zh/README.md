@@ -30,6 +30,6 @@ footer: Copyright © 2021 The Fluid Authors. All rights reserved. The Linux Foun
 <div align="center">
   Fluid是CNCF(Cloud Native Computing Foundation)沙箱项目之一.<p></p>
   <a href="https://www.cncf.io/">
-    <img src="https://ldawns.github.io/test_fluid-web/imgs/CNCF.png" width = "50%" height = "50%"  align=center>
+    <img src="https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/CNCF.png" width = "50%" height = "50%"  align=center>
   </a>
 </div>

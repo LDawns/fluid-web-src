@@ -6,7 +6,8 @@ sidebarDepth: 0
 
 # Fluid 给数据弹性一双隐形的翅膀 -- 自定义弹性伸缩
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfnM1QfRV6eHamufkUACPTD6YjsVxtcN2EtJLo6tY2nI9odgMEm5HoGA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-01.webp)
+
 
 **导读:** 弹性伸缩作为 Kubernetes 的核心能力之一，但它一直是围绕这无状态的应用负载展开。而 Fluid 提供了分布式缓存的弹性伸缩能力，可以灵活扩充和收缩数据缓存。 它基于 Runtime 提供了缓存空间、现有缓存比例等性能指标, 结合自身对于 Runtime 资源的扩缩容能力，提供数据缓存按需伸缩能力。
 
@@ -14,7 +15,8 @@ sidebarDepth: 0
 
 随着越来越多的大数据和 AI 等数据密集应用开始部署和运行在 Kubernetes 环境下，数据密集型应用计算框架的设计理念和云原生灵活的应用编排的分歧，导致了数据访问和计算瓶颈。云原生数据编排引擎 Fluid 通过数据集的抽象，利用分布式缓存技术，结合调度器，为应用提供了数据访问加速的能力。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfDlDfPoLHK1CjzH8l4ibjQfKHOH5biazdrI7ZyemuhkNeSFqhiaYcUkt2A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-02.png)
+
 
 弹性伸缩作为 Kubernetes 的核心能力之一，但它一直是围绕这无状态的应用负载展开。而 Fluid 提供了分布式缓存的弹性伸缩能力，可以灵活扩充和收缩数据缓存。它基于 Runtime 提供了缓存空间、现有缓存比例等性能指标, 结合自身对于 Runtime 资源的扩缩容能力，提供数据缓存按需伸缩能力。
 
@@ -25,7 +27,8 @@ sidebarDepth: 0
 3. **模型评估**：通过测试集或者验证集对于第二阶段生成模型进行评估和测试。
 4. **模型推理**：第三阶段验证后的模型最终推送到线上为业务提供推理服务。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfQY5EF2q2pwqTnjeXBsfEnvaDsZ6ubMeHb6PEI3Ln79xWUwHVBaz9pw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-03.webp)
+
 
 可以看到端到端的流水线会包含多种不同类型的计算任务，针对每一个计算任务，实践中会有合适的专业系统来处理（TensorFlow，PyTorch，Spark， Presto）；但是这些系统彼此独立，通常要借助外部文件系统来实现把数据从一个阶段传递到下一个阶段。但是频繁的使用文件系统实现数据交换，会带来大量的 I/O 开销，经常会成为整个工作流的瓶颈。
 
@@ -119,8 +122,7 @@ prometheus-svc   NodePort   172.16.135.24   <none>        9090:32114/TCP   2m7s
 > https://github.com/fluid-cloudnative/fluid/blob/master/docs/zh/operation/monitoring.md
 
 
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsftc0haAXmMLkBBagySeMURLh6Re8oT37J27Z1cr0hElvDia9wDWLqiaow/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-04.webp)
 
 ### 5. 部署 metrics server
 

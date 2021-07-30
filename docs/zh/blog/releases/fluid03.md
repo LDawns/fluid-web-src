@@ -4,6 +4,8 @@ sidebarDepth: 0
 
 # Fluid 0.3 新版本正式发布：实现云原生场景通用化数据加速
 
+![0.3-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.3-index.webp)
+
 **导读：** 为了解决大数据、AI 等数据密集型应用在云原生计算存储分离场景下，存在的数据**访问延时高、联合分析难、多维管理杂**等痛点问题，南京大学 PASALab、阿里巴巴、Alluxio 在 2020 年 9 月份联合发起了开源项目 Fluid
 
 Fluid 是云原生环境下数据密集型应用的高效支撑平台，项目自开源发布以来吸引了众多相关方向领域专家和工程师的关注，在大家的积极反馈下社区的开发工作进展迅速。近期 Fluid 0.3 版本正式发布，主要新增了三项重要功能，分别是：
@@ -28,7 +30,7 @@ Fluid v0.3 下载链接：https://github.com/fluid-cloudnative/fluid/releases
 
 为了提升 Fluid 在云原生数据访问加速场景的通用性，Fluid v0.3. 增加了**对数据卷 Persistent Volume Claim (PVC) 和主机目录（Host Path）挂载的加速支持**，从而为各类存储系统与 Fluid 的对接提供了一种通用化加速方案：无论使用哪一种底层存储系统，**只要该存储系统可被映射为 Kubernetes 原生的数据卷 PVC 资源对象或者集群节点上的主机目录，那么它就可以通过 Fluid 享受到如分布式数据缓存、数据亲和性调度等功能特性带来的优势**。其基本概念如下图所示：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvnvD0Gk3dWjJNcYPkPPMRykib4Z0ia44eeICHibG2bOscUaYfcztKSD3iaLtIMIHvRGdibjUCyAHbmLjYQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![0.3-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.3-01.webp)
 
 具体使用方法非常简单，用户只需在 mountPoint 中指定 pvc://nfs-imagenet，其中 nfs-imagenet 是 Kubernetes 集群中已有数据卷。
 
@@ -48,7 +50,7 @@ spec:
 
 这部分系统演示视频如下：
 
-[![03-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/accelerate_pvc.jfif)](http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_302459823704_hd_hq.mp4?auth_key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![03-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/accelerate_pvc.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/accelerate_pvc.mp4)
 
 
 我们通过 TensorFlow Benchmark 训练 ResNet-50 模型为测试场景，验证了 PVC 访问加速能力，以下是速度提升结果：

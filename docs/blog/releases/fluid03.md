@@ -4,6 +4,8 @@ sidebarDepth: 0
 
 # Fluid 0.3 Release Official: Accelerating data generalization for cloud native scenes
 
+![0.3-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.3-index.webp)
+
 **Guidance:** In order to solve the painful points of data **high access delay, difficult joint analysis, multidimensional management** in the separate scenario of data-intensive applications such as big data and AI, etc. In September 1920, Nanjing University PASALab, Alibaba and Alluxio jointly launched Open Source Project Fluid.
 
 Fluid is an efficient support platform for data-intensive applications in the cloud native environment. Since the release of open source, the project has attracted the attention of many interested field experts and engineers, and the development of the community is progressing rapidly with positive feedback from everyone.Recently, Fluid version 0.3 was officially released with three new key features:
@@ -28,7 +30,7 @@ Although previous versions of Fluid already support many underlying storage syst
 
 To improve the versatility of Fluid in cloud native data access acceleration scenarios, Fluid v0.3.Added **acceleration support for data volume Persistent Volume Claim (PVC) and host directory (Host Path)** to provide a versatile acceleration scheme for linking various storage systems to Fluid, regardless of the underlying storage system used. **As long as the storage system can be mapped to a native data volume PVC resource object of Kubernetes or a host directory on a cluster node, it can enjoy the benefits of features such as distributed data caching, data affinity scheduling, and so on through Fluid**. The basic concepts are as follows:
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvnvD0Gk3dWjJNcYPkPPMRykib4Z0ia44eeICHibG2bOscUaYfcztKSD3iaLtIMIHvRGdibjUCyAHbmLjYQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![0.3-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.3-01.webp)
 
 It's easy to use, and the user only needs to specify it in mountPointpvc://nfs-imagenetWhere nfs-imagenet is an existing data volume in the Kubernetes cluster.
 
@@ -46,7 +48,7 @@ spec:
 
 This part of the system demonstration video is as follows:
 
-[![03-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/accelerate_pvc.jfif)](http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_302459823704_hd_hq.mp4?auth_key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![03-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/accelerate_pvc.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/accelerate_pvc.mp4)
 
 We trained resnet-50 model through tensorflow benchmark as a test scenario to verify the PVC access acceleration ability. The following are the speed improvement results:
 

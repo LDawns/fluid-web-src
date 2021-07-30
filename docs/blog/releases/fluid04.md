@@ -4,6 +4,8 @@ sidebarDepth: 0
 
 # Fluid 0.4 new release: supports data preheating and optimizes small file  scenarios
 
+![0.4-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.4-index.webp)
+
 **Guide reading:** in order to solve the problems of high delay of data access, difficult joint analysis and multi-dimensional management in the separation scenario of data intensive applications such as big data and AI in cloud primary computing storage separation scenario, pasalab, Alibaba and alluxio of Nanjing University jointly launched open source project fluid in September 2020.
 
 Recently, fluid 0.4 version was officially released, with four important functions added, namely:
@@ -44,7 +46,7 @@ In addition, with a small amount of additional configuration, dataload can also 
 
 The demo video on the use and optimization of dataload is as follows:
 
-[![ 04-demo]( https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/dataWarmup.jfif )]( http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_ 302459823704_ hd_ hq.mp4? auth_ key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![04-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/dataWarmup.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/dataWarmup.mp4)
 
 ## Enhance the support ability of large amount of small file data sets
 

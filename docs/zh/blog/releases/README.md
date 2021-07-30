@@ -39,7 +39,7 @@ Fluid 是云原生环境下数据密集型应用的高效支撑平台，项目�
 
 有关数据集手动扩缩容及其效果的演示视频如下：
 
-[![fly-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/on-the-fly.jfif)](http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_302459823704_hd_hq.mp4?auth_key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![fly-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/on-the-fly.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/on-the-fly.mp4)
 
 更多关于数据集手动扩缩容的操作细节，请参考示例中的[文档](/zh/samples/dataset_scaling.md)
 
@@ -85,7 +85,7 @@ Fluid v0.5 还进一步增强了数据集的可观测性能力，具体包括两
 
 该特性能够支持数据集的可用性和性能指标收集，并且通过 Grafana 进行可视化展示。目前已支持 AlluxioRuntime 的实现，使用者可以方便地了解当前可缓存节点、缓存空间、现有缓存比例、远程读、短路读等性能指标。整个配置过程非常简单，达到了对于数据集监控系统“开箱即用"的效果。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvlialiciaDLLXoSr6aHN4Mexf2MdTFDeW5icgS6kEYdUbyzES5aAicz3sD14u2taIjShicLiaSDAMib0wZWDQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-04.webp)
 
 
 #### 2）新增数据集缓存命中率指标

@@ -15,7 +15,7 @@ Fluid is committed to combining the original research of academia and the landin
 
 In the cloud native environment, while improving the system flexibility and flexibility, the computing storage separation architecture brings challenges to the computing performance and management efficiency of data intensive applications such as big data / AI. The existing cloud native orchestration framework running such applications is faced with high data access latency, difficult joint analysis of multiple data sources, complex data use process and other pain points. Fluid is born to solve these problems.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib46qAHicOxDribHWLIjZ9FTsbADP7TDibxZrusewFxFuceicXicX4AdsIjtVNovhTTVyYfOxBNRzPfuxY1bxUr4EDjA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_archi](http://kubeflow.oss-cn-beijing.aliyuncs.com/Static/architecture.png)
 
 ## Core functions
 

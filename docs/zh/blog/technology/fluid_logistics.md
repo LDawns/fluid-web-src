@@ -4,8 +4,7 @@ sidebarDepth: 0
 
 # Fluid — 云原生环境下的高效“数据物流系统”
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WpseRBKB2I62T6nUN1MhASTIch6gPRqUImibbA13p5sH0tLZxdsno5JA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-01.webp)
 
 得益于计算成本低、易于扩展、部署便捷、运维高效等多方面的优势，云计算平台吸引了越来越多的数据密集型应用在上面运行。如今，以 Kubernetes 为代表的云原生架构，因其灵活的资源可负载性以及高效的应用编排调度，在很多AI/大数据等数据密集型场景中应用广泛。然而，云原生环境和数据密集应用计算框架在早先设计理念和机制上存在天然分歧。因此，如何帮助数据密集型应用在云原生场景下高效、安全、便捷地访问数据，是一个既有理论意义又具应用价值的重要问题。
 
@@ -35,7 +34,7 @@ sidebarDepth: 0
 
 从用户的实际体验来看，现有云原生编排框架对数据密集型应用支持不够友好，主要体现在运行效率低下和数据管理复杂两方面。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W5ahHsbOFDeyGfDicBR5BCp2chGsjYQL91uJ0ZStlbabxKEh1fKoUMEg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-02.webp)
 
 **运行效率低下**：如上图所示，训练一个 RestNet50 神经网络，如果基于本地内存运行，大概每秒钟能训练近 1 万张图片；然而，在云原生环境下运行，基于 Cloud Storage 存储架构每秒训练的图片只能达到约 3000 张/秒，性能下降比较明显。
 
@@ -45,11 +44,11 @@ sidebarDepth: 0
 
 云原生环境和数据密集处理框架在设计理念和机制上存在天然分歧，这两部分技术的早先产生和发展过程是相互独立的。我们可以看到，为了兼顾资源扩展的灵活性和使用成本，**计算和存储分离**的基本架构在云原生环境中大行其道；反观之，以大数据和 AI 训练为代表的数据密集型应用框架，为了减少数据传输，设计理念更多需要考虑**数据本地化架构**，两者在设计上存在分歧。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WH8icvTRnrASvVPbT7JHicK9HuATle3ITnOgJzibibxumsXEciaedLbeNIGg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-03.webp)
 
 另外，我们发现在云原生环境中，应用通常是以无状态（stateless）微服务化的方式进行部署，通过 FaaS（Function as a Service）方式串联。而在数据密集型框架应用中，是以数据抽象为中心开展，并进行任务分配执行，比如在 Spark 里都是围绕 RDD 构建整个大数据处理应用，中间加上算子。然而，无状态微服务并不是以数据为中心，这也存在设计上的分歧。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W0lqjIrMiaCrvY8PKQYkpndLZHmHq3HI0Wiavsa1GGjzU0DCPMYEwzzsg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-04.webp)
 
 以上问题导致以 Kubernetes 为代表的云原生编排框架对于数据密集型应用，尤其是 AI 和大数据应用的支持还不够友好，具体体现在前面所述的运行效率低下、数据操作管理复杂等方面。
 
@@ -73,7 +72,7 @@ sidebarDepth: 0
 
 为了更好地理解这些问题，我们可以做一些联想性的思考。如下图所示，引入商品购物模式，我们将**商品、超市、客户**类比为**数据、存储、应用**。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WRSgdNI6PyjsX8CYQWIo3U8yUMjNVXE0oDicibGn8nDGgWy31PHBR47Lw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-05.webp)
 
 - **商品**和**数据**都会被消费，商品会被消费者购买掉，数据会被应用读走，两者有一定类似性。
 
@@ -83,11 +82,11 @@ sidebarDepth: 0
 
 **商品、超市（商铺） 、客**户模式，在过去几千年里发展得非常成熟，非常稳定。直到 2000 年之后发生了颠覆性的变化，这就是电商的产生。电商发明了线上购物模式，其特点体现在不再以店铺为中心而是以客户为中心，商品贮藏在仓库，客户可以在线上虚拟商铺挑选商品，最后由现代化物流将商品交付到客户，交易过程**高效便捷、交易量更大**。商品直接放在仓库里，仓库可以进行规范化、独立化管理，之后客户到电商平台上购买货物，会非常便捷、方便。客户不需要到店铺，在地铁上、车上、办公室、家里都可以用手机、电脑进行购物，而且不会存在商品寻找低效的情况，因为客户是在互联网上购物，都可以通过检索方式查找海量商品；线上购物的另一个优势是交易频次变得更高，交易量变得更大；客户也不需要必须去店里提货，快递可以直接送货上门，非常方便。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WibQPVjewMD5Mriaxg9DOv8wRdY5vl6pzzgiagicXn3Oia1AnNJEazYx0hkg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-06.webp)
 
 电商模式的成功有很多因素，其中有两大因素非常关键，一是如支付宝这样的第三方数字化支付工具的出现，二是如菜鸟这样专业化的物流系统产生，构建起四通八达的物流网络，使快速的商品寄送模式得以实现。反观回到现在计算机系统中，在现代云架构下，数据贮存在云存储系统中，数据密集型应用也以pod等各种各样资源描述符的方式在云原生环境下运行，但中间却缺乏一个高效的数据交付、数据递送的方式。也就是说，在云原生架构下面，数据贮藏在云存储系统当中，应用还是根据需要去访问数据，但由于类似的数据**“物流系统”的缺失，导致数据密集型应用消费访问数据在云平台上比较低效**。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WMwq4ARZePYIdWZ7pJmNMHguA5HWqMib4I9de8ic81zCUIh9mmFphmYFQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-07.webp)
 
 
 
@@ -97,7 +96,7 @@ sidebarDepth: 0
 
 ### 1. Fluid 扮演云原生的“数据物流系统”角色
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W9AsiajqFRfaMChjyiaCujnTLSP0vicS6RsuWoWMJDkXib9bEh1quGrHWpQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-08.webp)
 
 我们可以将 Fluid 所扮演角色理解为云原生环境下“数据物流系统”。回顾一下，在早先的大数据平台中，数据的访问尽量都是通过本地化进行。当用户写一个 MapReduce Job，Job 里包含很多 Task， 其中关注比较多的就是 MapTask 处理数据时是尽量将 Task 调度到用户要处理的数据所在的节点上运行。这种情况下，当用户访问数据时，尽管该数据是在 HDFS 这个分布式系统中，但本质上相当于从分布式系统中的本地节点上获取，我们称之为 Data Fetch。
 
@@ -143,7 +142,7 @@ Kubernetes 调度器通过与缓存引擎交互获得节点的数据缓存信息
 
 ### 1. Fluid 系统架构
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WoNTK7oSThR66XBZDqC7kLZLT4xo5SC5mAg58mtibZt8qGCrBUKnCeaw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-09.webp)
 
 Fluid 是构建在 K8s 上的系统，对原生 K8s 具备良好的兼容性，无需修改任意代码。如上图所示，用户需要定义两个 CRD，分别是 Dataset 和 Runtime。Dataset 是数据集的通用定义，这是我们提供的 K8s 资源对象，需要写 YAML 文件来定义数据集从哪儿来，以及想要放到哪儿去；Runtime 是存储这些数据集的缓存引擎，目前使用的是开源的分布式缓存系统 Alluxio。这里要注意的是 Dataset 和 Runtime 定义的时候，它通常是要具有相同 Namespace，从而实现很好的绑定。
 
@@ -199,21 +198,20 @@ Fluid 不是全存储加速和管理，而是以应用为中心数据集加速�
 
 ### 3. 如何使用 Fluid
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WPw0WndEia8Zb0xibmWxA5pAhG9ARADjvhFxayCbK32tU4kicfbgAqibLog/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-10.webp)
 以上图为例，用户在使用场景中需要使用来自两个不同地方的数据，假设一个来自阿里云，另外一个是本地存储 Ceph。在 Fluid 里面我们可以很容易地描述这样的数据集，通过创建一个自定义 K8s 资源对象 Dataset，对应的 mountPoint 可以加载两个，分别是阿里云和 Ceph。
 
 创建好就可以运行，这个过程中 Fluid 会创建一个 Dataset，并自动将它变成一个 PVC。当用户需要用这个数据时创建一个 Pod，以 PVC 挂载的方式，将 Dataset 关联到运行中的 Pod 中对数据进行访问。甚至 Pod 根本都不知道 PVC 后台运行的是 Fluid，而不是其他的存储，例如 NFS。整个过程和背后的原理对用户都是透明的，这使得对遗留程序的对接非常友好。
 
 ### 4. 如何检查和观测 dataset 状态
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WcozQnXGaUPdcibywPb9ddNHHGib2oxIibf8voLrkhlU4hgZ4VWYZzibHVQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-11.webp)
 
 当真正运行起来时有很多可观测的东西，我们在 Dataset CRD 里定义了很多 metrics。如上图所以，缓存总容量为 200GB，实际需要的容量为 84.29GB，无需扩容，后续可根据实际需求灵活扩容。通过这个工具，用户可以有效查询存储容量与使用量，从而实现可观测性。
 
 ### 5. 根据数据集本地性调度作业
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WM2vU6tpQWVzEkycibSYblp7pjVwWKtrEjAI82TiaVaJMvriab0mBgW5QQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-12.webp)
 
 对于使用数据集应用的编排也很容易，只需要使用 PVC 模式把 Fluid 数据集挂载到应用当中，然后 K8s 调度器就会和 Fluid 调度器进行交互。
 
@@ -221,11 +219,11 @@ Fluid 不是全存储加速和管理，而是以应用为中心数据集加速�
 
 ## Fluid 性能评估
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WjC0w1WW6dRcibib2LCAdeeIPnSwAZdgdSp5Nkbjn9sicy3lQ79mHXnO1w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-13.webp)
 
 如上图所示，我们发现卡数量越来越多的时候，使用 Fluid 会带来巨大的性能提升。这其中的本质原因是当 GPU 数量变得越来越多（或 GPU 算力越来越强）时，访问大规模数据已经成为整个训练任务的瓶颈。从上图是训练结果来看，使用 Fluid 训练的端到端的性能最后提升约1倍，减少成本并提升了用户体验。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WckxQqGEAV1Tl6gicpYgFDQwXc1fDU3wzu3PMU2c8qDwjFWic8uFgyN3g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-14.webp)
 
 
 

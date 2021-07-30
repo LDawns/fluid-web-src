@@ -3,7 +3,8 @@ sidebarDepth: 0
 ---
 # Fluid: an important puzzle for big data and AI to embrace cloud Nativity
 
-![fluid_blog](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvnlhWxPxgrTkwgRSItqpyoYNqcaG3KExJl7zv0rC6e1HUtIoKU0LFtMWibs0nbAcDCMUcoeW08deCw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-tech-puzzle.webp)
+
 
 Thanks to the efficient deployment and agile iteration brought by containerization, as well as the natural advantages of cloud computing in resource cost and elastic expansion, the cloud native choreography framework represented by Kubernetes attracts more and more AI and big data applications to deploy and run on it. However, there has been a lack of a native component in the cloud native Computing Foundation (CNCF) to help these data intensive applications access data efficiently, safely and conveniently in the cloud native scenario.
 
@@ -42,11 +43,11 @@ The specific architecture is shown in the figure below:
 
 We provide a demo of the video to show you how to improve the speed of AI model training on the cloud through fluid. In this demo, using the same resnet50 test code, fluid acceleration has obvious advantages over native ossfs direct access in terms of training speed per second and total training time, and the training time is reduced by 69%.
 
-![demo](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvnlhWxPxgrTkwgRSItqpyoYAiaLGLbj3Qh1dacoaxtZ1OicF6memS5BepLQZFySTz28084j8ZW6UAZA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![69](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/oosfs-fluid.webp)
 
 Video presentation:
 
-[![](http://kubeflow.oss-cn-beijing.aliyuncs.com/Static/machine_learning.png)](http://cloud.video.taobao.com/play/u/2987821887/p/1/e/6/t/1/277528130570.mp4)
+[![demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/machineLearning.png)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/machineLearning.mp4)
 
 ## Experience fluid?
 

@@ -39,7 +39,7 @@ Where dataset name corresponds to the name of the dataset, replica specifies the
 
 The video of manual expansion and its effect of data set is as follows:
 
-[![ fly-demo]( https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/on-the-fly.jfif )](http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_ 302459823704_ hd_ hq.mp4? auth_ key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![fly-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/on-the-fly.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/on-the-fly.mp4)
 
 For more details on manual scaling of datasets, refer to [documentation](/samples/dataset_scaling.md)
 
@@ -87,7 +87,7 @@ Fluid v0.5 also further enhances the observability of the dataset, which include
 
 This feature supports the collection of data set availability and performance indicators and is visualized through grafana. At present, the implementation of alloxioruntime is supported. Users can easily understand the performance indicators such as current cache node, cache space, existing cache ratio, remote reading, short-circuit reading and so on. The whole configuration process is very simple, and it achieves the effect of "out of the box" for the data set monitoring system.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvlialiciaDLLXoSr6aHN4Mexf2MdTFDeW5icgS6kEYdUbyzES5aAicz3sD14u2taIjShicLiaSDAMib0wZWDQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-04.webp)
 
 
 

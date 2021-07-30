@@ -3,7 +3,7 @@ sidebarDepth: 0
 ---
 # Fluid: 让大数据和 AI 拥抱云原生的一块重要拼图
 
-![fluid_blog](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvnlhWxPxgrTkwgRSItqpyoYNqcaG3KExJl7zv0rC6e1HUtIoKU0LFtMWibs0nbAcDCMUcoeW08deCw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-tech-puzzle.webp)
 
 得益于容器化带来的高效部署、敏捷迭代，以及云计算在资源成本和弹性扩展方面的天然优势，以 Kubernetes 为代表的云原生编排框架吸引着越来越多的 AI 与大数据应用在其上部署和运行。然而，云原生计算基金会（CNCF）中此前一直缺失一款原生组件，以帮助这些数据密集型应用在云原生场景下高效、安全、便捷地访问数据。
 
@@ -44,11 +44,11 @@ Fluid 项目当前主要关注数据集编排和应用编排这两个重要场�
 
 我们提供了视频的 Demo，为您展示如何通过 Fluid 提升云上 AI 模型训练的速度。在这个 Demo 中，使用同样的 ResNet50 测试代码，Fluid 加速和原生的 ossfs 直接访问相比，不论在每秒钟的训练速度，和训练总时长相比都有明显的优势，训练耗时缩短了 69%。
 
-![demo](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvnlhWxPxgrTkwgRSItqpyoYAiaLGLbj3Qh1dacoaxtZ1OicF6memS5BepLQZFySTz28084j8ZW6UAZA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![69](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/oosfs-fluid.webp)
 
 视频演示：
 
-[![](http://kubeflow.oss-cn-beijing.aliyuncs.com/Static/machine_learning.png)](http://cloud.video.taobao.com/play/u/2987821887/p/1/e/6/t/1/277528130570.mp4)
+[![demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/machineLearning.png)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/machineLearning.mp4)
 
 ## 快速体验 Fluid？
 

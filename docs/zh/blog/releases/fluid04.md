@@ -4,6 +4,8 @@ sidebarDepth: 0
 
 # Fluid 0.4 新版本正式发布：支持数据预热，优化小文件场景
 
+![0.4-img](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-0.4-index.webp)
+
 **导读：** 为了解决大数据、AI 等数据密集型应用在云原生计算存储分离场景下，存在的数据访问延时高、联合分析难、多维管理杂等痛点问题，南京大学 PASALab、阿里巴巴、Alluxio 在 2020 年 9 月份联合发起了开源项目 Fluid。
 
 近期 Fluid 0.4 版本正式发布，主要新增了以下四项重要功能，分别是：
@@ -47,7 +49,7 @@ spec:
 
 有关 DataLoad 使用与优化效果的演示视频如下：
 
-[![04-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/dataWarmup.jfif)](http://tbm-auth.alicdn.com/e99361edd833010b/dSVC55aoHBRio4co9aD/ZufLSdTxRmFes54tZ1a_302459823704_hd_hq.mp4?auth_key=1627303642-0-0-a8575676f7131c06489a29e302541323)
+[![04-demo](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/dataWarmup.jfif)](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/video/dataWarmup.mp4)
 
 ##  增强海量小文件数据集的支撑能力
 

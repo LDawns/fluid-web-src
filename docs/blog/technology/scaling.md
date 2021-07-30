@@ -4,7 +4,7 @@ sidebarDepth: 0
 
 # Fluid gives data elasticity a pair of invisible wings - Custom elastic expansion
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfnM1QfRV6eHamufkUACPTD6YjsVxtcN2EtJLo6tY2nI9odgMEm5HoGA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-01.webp)
 
 **Introduction:** elastic scaling is one of the core capabilities of kubernetes, but it has always been carried out around this stateless application load. Fluid provides the elastic scalability of distributed cache, which can flexibly expand and shrink data cache. It provides performance indicators such as cache space and existing cache proportion based on runtime, and provides data cache scalability on demand in combination with its capacity to expand and shrink runtime resources.
 
@@ -12,7 +12,8 @@ sidebarDepth: 0
 
 As more and more data intensive applications such as big data and AI begin to be deployed and run in kubernetes environment, the differences between the design concept of data intensive application computing framework and the original flexible application layout of cloud lead to data access and computing bottlenecks. The cloud native data orchestration engine fluid provides the ability to accelerate data access for applications through the abstraction of data sets, the use of distributed cache technology and the combination of scheduler.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfDlDfPoLHK1CjzH8l4ibjQfKHOH5biazdrI7ZyemuhkNeSFqhiaYcUkt2A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-02.png)
+
 
 Elastic scaling is one of the core capabilities of kubernetes, but it has always been carried out around this stateless application load. Fluid provides the elastic scalability of distributed cache, which can flexibly expand and shrink data cache. It provides performance indicators such as cache space and existing cache proportion based on runtime, and provides data cache scalability on demand in combination with its capacity to expand and shrink runtime resources.
 
@@ -26,7 +27,8 @@ This capability is very important for big data applications in the Internet scen
 
 4. **model reasoning**: the model verified in the third stage is finally pushed online to provide reasoning services for the business.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsfQY5EF2q2pwqTnjeXBsfEnvaDsZ6ubMeHb6PEI3Ln79xWUwHVBaz9pw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-03.webp)
 
 It can be seen that the end-to-end pipeline will contain many different types of computing tasks. For each computing task, there will be an appropriate professional system to handle it in practice (tensorflow, pytorch, spark, PRESTO); However, these systems are independent of each other, and usually transfer data from one stage to the next with the help of external file system. However, frequent use of file system for data exchange will bring a lot of I / O overhead and often become the bottleneck of the whole workflow.
 
@@ -110,7 +112,9 @@ prometheus-svc   NodePort   172.16.135.24   <none>        9090:32114/TCP   2m7s
 
 If you want to visualize the monitoring indicators, you can install grafana to verify the monitoring data. Refer to the documentation for specific operations.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvlDU5Loo3wZD09D99qEvVsftc0haAXmMLkBBagySeMURLh6Re8oT37J27Z1cr0hElvDia9wDWLqiaow/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-elastic-04.webp)
+
 
 ### 5. Deploy metrics server
 

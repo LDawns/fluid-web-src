@@ -3,7 +3,8 @@ sidebarDepth: 0
 ---
 # Fluid - efficient "data logistics system" in cloud native environment
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WpseRBKB2I62T6nUN1MhASTIch6gPRqUImibbA13p5sH0tLZxdsno5JA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-01.webp)
+
 
 Thanks to the advantages of low computing cost, easy expansion, convenient deployment and efficient operation and maintenance, cloud computing platform has attracted more and more data intensive applications to run on it. Today, the cloud native architecture represented by kubernetes is widely used in many data intensive scenarios such as AI / big data because of its flexible resource loadability and efficient application scheduling. However, there are natural differences between cloud native environment and data intensive application computing framework in previous design concepts and mechanisms. Therefore, how to help data intensive applications access data efficiently, safely and conveniently in the cloud native scenario is an important issue with both theoretical significance and application value.
 
@@ -33,7 +34,7 @@ Spark3.0.1 runs on K8s：*https://spark.apache.org/docs/latest/running-on-kubern
 
 From the actual experience of users, the existing cloud native orchestration framework is not friendly enough to support data intensive applications, which is mainly reflected in low operation efficiency and complex data management.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W5ahHsbOFDeyGfDicBR5BCp2chGsjYQL91uJ0ZStlbabxKEh1fKoUMEg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-02.webp)
 
 
 
@@ -44,11 +45,11 @@ From the actual experience of users, the existing cloud native orchestration fra
 
 There are natural differences in design concepts and mechanisms between cloud native environment and data intensive processing framework. The early generation and development process of these two technologies are independent of each other. We can see that in order to take into account the flexibility and cost of resource expansion, the basic architecture of**separation of computing and storage** is popular in the cloud native environment; In contrast, for the data intensive application framework represented by big data and AI training, in order to reduce data transmission, the design concept needs to consider**data localization architecture**. There are differences in the design between the two.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WH8icvTRnrASvVPbT7JHicK9HuATle3ITnOgJzibibxumsXEciaedLbeNIGg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-03.webp)
 
 In addition, we found that in the cloud native environment, applications are usually deployed in the way of stateless micro service, and connected in series through FAAS (function as a service). In data intensive framework applications, it is carried out with data abstraction as the center and task allocation and execution. For example, in spark, the whole big data processing application is built around RDD, with operators in the middle. However, stateless microservices are not data centric, which also has design differences.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W0lqjIrMiaCrvY8PKQYkpndLZHmHq3HI0Wiavsa1GGjzU0DCPMYEwzzsg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-04.webp)
 
 The above problems lead to the fact that the cloud native orchestration framework represented by kubernetes is not friendly enough to support data intensive applications, especially AI and big data applications, which is specifically reflected in the low operation efficiency and complex data operation management mentioned above.
 
@@ -72,7 +73,7 @@ To sum up, we can summarize a phenomenon: kubernetes ecology currently lacks the
 
 In order to better understand these problems, we can do some associative thinking. As shown in the figure below, by introducing the commodity shopping mode, we compare**commodities, supermarkets and customers** to**data, storage and application**.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WRSgdNI6PyjsX8CYQWIo3U8yUMjNVXE0oDicibGn8nDGgWy31PHBR47Lw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-05.webp)
 
 - **goods** and **data**will be consumed, goods will be purchased by consumers, and data will be read by applications. They are similar to each other.
 
@@ -82,11 +83,13 @@ In order to better understand these problems, we can do some associative thinkin
 
 Commodities, supermarkets (shops) and customer model have developed very mature and stable in the past few thousand years. Until 2000, there was a disruptive change, which is the emergence of e-commerce. E-commerce has invented the online shopping mode, which is characterized by no longer taking the store as the center, but taking the customer as the center. The goods are stored in the warehouse. Customers can select the goods in the online virtual shop, and finally deliver the goods to customers by modern logistics. The transaction process isefficient and convenient, and the transaction volume is larger. The goods are directly placed in the warehouse, which can be managed in a standardized and independent way. After that, it will be very convenient and convenient for customers to buy goods on the e-commerce platform. Customers do not need to go to stores. They can use mobile phones and computers to shop on the subway, in the car, in the office and at home, and there will be no inefficient commodity search, because customers shop on the Internet and can search a large number of commodities through retrieval; Another advantage of online shopping is that the transaction frequency becomes higher and the transaction volume becomes larger; Customers don't have to go to the store to pick up the goods. Express delivery can be delivered directly to the door, which is very convenient.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WibQPVjewMD5Mriaxg9DOv8wRdY5vl6pzzgiagicXn3Oia1AnNJEazYx0hkg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-06.webp)
+
 
 There are many factors in the success of the electricity supplier mode. There are two key factors. First, the emergence of the third party digital payment tools such as Alipay, and two, such as rookie, are the logistics system that produces specialized products. In contrast, in the current computer system, under the modern Cloud Architecture, data is stored in the cloud storage system, and data intensive applications also run in the cloud native environment in the form of various resource descriptors such as pod, but there is a lack of an efficient way of data delivery and data delivery. In other words, under the cloud native architecture, the data is stored in the cloud storage system, and the application still accesses the data as needed. However, due to the lack of similar data "logistics system", the consumption and access data of data intensive applications is inefficient on the cloud platform.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WMwq4ARZePYIdWZ7pJmNMHguA5HWqMib4I9de8ic81zCUIh9mmFphmYFQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-07.webp)
+
 
 ## Fluid core philosophy
 
@@ -94,7 +97,8 @@ Based on the above analysis and the association obtained from observation, let's
 
 ### 1. Fluid plays the role of cloud native "data logistics system"
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9W9AsiajqFRfaMChjyiaCujnTLSP0vicS6RsuWoWMJDkXib9bEh1quGrHWpQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-08.webp)
+
 
 We can understand the role of fluid as a "data logistics system" in the cloud native environment. Recall that in previous big data platforms, data access was done through localization as much as possible. When a user writes a MapReduce job, the job contains many tasks, of which maptask pays more attention. When processing data, the user tries to schedule the task to the node where the data to be processed is located. In this case, when users access data, although the data is in the distributed system HDFS, it is essentially equivalent to obtaining it from the local node in the distributed system, which is called data fetch.
 
@@ -139,7 +143,8 @@ The kubernetes scheduler obtains the data cache information of the node by inter
 
 ### 1. Fluid system architecture
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WoNTK7oSThR66XBZDqC7kLZLT4xo5SC5mAg58mtibZt8qGCrBUKnCeaw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-09.webp)
+
 Fluid is a system built on k8s and has good compatibility with native k8s without modifying any code. As shown in the figure above, the user needs to define two CRDs: dataset and runtime. Dataset is the general definition of dataset, which is the k8s resource object provided by us. Yaml files need to be written to define where the dataset comes from and where it wants to be put; Runtime is the cache engine that stores these data sets. At present, it uses the open source distributed cache system alluxio. It should be noted here that when defining dataset and runtime, it usually has the same namespace, so as to achieve good binding.
 
 Fluid operator is the core of the fluid project. It is divided into two parts. The first part is fluid controller manager, which contains many controllers; The other part is fluid scheduler. These two components complete the operation of scheduling. The work of fluid controller manager is to arrange the data, including three controllers. The three controllers are logically independent and can be used as a single process. However, in order to reduce the complexity, many controller functions are combined into one or more executable files during compilation, so they are also a process when they are actually running.
@@ -190,19 +195,24 @@ From the docking point of view, the data volume interface is supported to unifor
 The isolation mechanism enables the access to data sets to be isolated between different storage accelerators, and realizes permission control management.
 
 ### 3. How to use fluid
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WPw0WndEia8Zb0xibmWxA5pAhG9ARADjvhFxayCbK32tU4kicfbgAqibLog/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-10.webp)
+
 Taking the above figure as an example, users need to use data from two different places in the use scenario. Suppose one is from Alibaba cloud and the other is local storage CEPH. In fluid, we can easily describe such a dataset. By creating a custom k8s resource object dataset, the corresponding mountpoint can load two, alicloud and CEPH.
 
 Once created, it can run. In this process, fluid will create a dataset and automatically turn it into a PVC. When the user needs to use this data, create a pod and associate the dataset with the running pod in the way of PVC mounting to access the data. Even pod doesn't know that the PVC background is running fluid, not other storage, such as NFS. The whole process and the principle behind it are transparent to users, which makes the docking of legacy programs very friendly.
 
 ### 4. How to check and observe dataset status
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WcozQnXGaUPdcibywPb9ddNHHGib2oxIibf8voLrkhlU4hgZ4VWYZzibHVQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-11.webp)
+
 
 When running, there are many observable things. We define many metrics in dataset CRD. As shown in the figure above, the total cache capacity is 200GB, and the actual required capacity is 84.29gb. There is no need to expand the capacity, and the subsequent capacity can be expanded flexibly according to the actual demand. Through this tool, users can effectively query the storage capacity and usage, so as to achieve scalability.
 
 ### 5. Schedule jobs locally according to the dataset
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WM2vU6tpQWVzEkycibSYblp7pjVwWKtrEjAI82TiaVaJMvriab0mBgW5QQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-12.webp)
+
 
 It is also easy to arrange the application using the dataset. You only need to mount the fluid dataset into the application using the PVC mode, and then the k8s scheduler will interact with the fluid scheduler.
 
@@ -210,11 +220,13 @@ As shown in the example above, interact after mounting, and arrange the pod to r
 
 ## Fluid performance evaluation
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WjC0w1WW6dRcibib2LCAdeeIPnSwAZdgdSp5Nkbjn9sicy3lQ79mHXnO1w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-13.webp)
+
 
 As shown in the figure above, we find that when the number of cards is increasing, using fluid will bring huge performance improvement. The essential reason is that when the number of GPUs becomes more and more (or the computing power of GPUs becomes stronger and stronger), accessing large-scale data has become the bottleneck of the whole training task. From the training results shown in the figure above, the end-to-end performance of fluid training is finally doubled, reducing costs and improving the user experience.
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvmVozQxFcGDsMbIYFYj9N9WckxQqGEAV1Tl6gicpYgFDQwXc1fDU3wzu3PMU2c8qDwjFWic8uFgyN3g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_blog](https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/fluid-logistics-14.webp)
+
 
 
 

@@ -15,7 +15,7 @@ Fluid 致力于结合学术界的原创研究和工业界的落地实践，加�
 
 云原生环境下，计算存储分离架构在提升系统弹性和灵活性的同时，给大数据 / AI 等数据密集型应用带来了计算性能和管理效率方面的挑战。现有云原生编排框架运行此类应用面临数据访问延时高、多数据源联合分析难、应用使用数据过程复杂等痛点。Fluid 正是为解决这些问题而生的。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/ib46qAHicOxDribHWLIjZ9FTsbADP7TDibxZrusewFxFuceicXicX4AdsIjtVNovhTTVyYfOxBNRzPfuxY1bxUr4EDjA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![fluid_archi](http://kubeflow.oss-cn-beijing.aliyuncs.com/Static/architecture.png)
 
 ## 核心功能
 
