@@ -112,8 +112,31 @@
             </el-col>
 
             <el-col class="adCol" :span="6">
-                <el-card :body-style="{ padding: '0px 10px', height: '103px'}">
+                <el-card :body-style="{ padding: '0px 10px'}"><center>
+                    <a href="https://www.bilibili.com/" target="_blank"> 
+                    <el-image class="adImg"
+                    style=" height: 100px"
+                    src = "https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/bilibili.png"
+                    fit = "scale-down"
+                    ></el-image>
+                    </a></center>
+                </el-card>
+            </el-col>
 
+            <el-col class="adCol" :span="6">
+                <el-card :body-style="{ padding: '0px 10px'}"><center>
+                    <a href="https://www.zybang.com/" target="_blank"> 
+                    <el-image class="adImg"
+                    style=" height: 100px"
+                    src = "https://fluid-imgs.oss-cn-shanghai.aliyuncs.com/public/imgs/zuoyebang.png"
+                    fit = "scale-down"
+                    ></el-image>
+                    </a></center>
+                </el-card>
+            </el-col>
+
+            <el-col class="adCol" :span="6">
+                <el-card :body-style="{ padding: '0px 10px', height: '103px'}">
                     <center>
                     <el-image class="adImg"
                     style="height: 64px"
