@@ -1,6 +1,6 @@
 module.exports = {
     head: [['link', { rel: 'icon', href: '/fluid-stacked-color.svg' }]],
-    base: "/test_fluid-web/",
+    base: "/fluid/",
     locales: {
       '/': {
         lang: 'en-us',
